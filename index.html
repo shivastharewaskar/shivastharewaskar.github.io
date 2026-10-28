@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Shivastha Rewaskar | Aspiring Data Analyst &amp; Business Analyst</title>
+  <meta name="title" content="Shivastha Rewaskar | Aspiring Data Analyst &amp; Business Analyst">
+  <meta name="description" content="Portfolio of Shivastha Rewaskar, Computer Science Engineer specializing in data analytics, business analysis, Power BI dashboards, Python, and SQL.">
+  <meta name="author" content="Shivastha Rewaskar">
+  <link rel="canonical" href="https://shivastharewaskar.github.io/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shivastharewaskar.github.io/">
+  <meta property="og:title" content="Shivastha Rewaskar | Portfolio">
+  <meta property="og:description" content="Computer Science graduate interested in data analytics, business analysis, data visualization, and technology-driven decision-making.">
+  <meta property="og:image" content="assets/favicon.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Page Transition Flash Prevention -->
+  <script>
+    (function() {
+      try {
+        if (sessionStorage.getItem('portfolio_page_transition') === '1' || window.location.search.indexOf('transition=1') !== -1) {
+          document.documentElement.classList.add('split-transition-active');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <!-- Screen Split Transition Overlay -->
+  <div class="screen-split-overlay" id="screen-split-overlay" aria-hidden="true">
+    <div class="split-curtain split-curtain-left"></div>
+    <div class="split-curtain split-curtain-right"></div>
+  </div>
+
+  <!-- Subtle Technical Canvas Background -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Accessible Skip Navigation -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#home" class="brand-logo" aria-label="Shivastha Rewaskar Homepage">
+        <span class="brand-text">sr_portfolio</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#contact" class="nav-link">About &amp; Contact</a>
+      </nav>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#certifications" class="mobile-link">Certifications</a>
+      <a href="#contact" class="mobile-link">About &amp; Contact</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content main-home" id="main">
+    <div class="container">
+      
+      <!-- Centered Hero Section (Full Viewport Above the Fold) -->
+      <section class="hero-section-centered" id="home">
+        
+        <!-- Name in Pure Crisp White -->
+        <h1 class="hero-name-center">Shivastha Rewaskar</h1>
+
+        <!-- Professional Headline -->
+        <p class="hero-role-center">
+          Aspiring Data Analyst <span class="role-tag-accent">|</span> Business Analyst <span class="role-tag-accent">|</span> Computer Science Engineer
+        </p>
+
+        <!-- Bio / Value Proposition -->
+        <p class="hero-bio-center">
+          I am a Computer Science Engineering graduate interested in data analytics, business analysis, data visualization, and technology-driven decision-making. I enjoy exploring datasets, identifying patterns, creating dashboards, and translating information into useful business insights.
+        </p>
+
+        <!-- Skills Strip: Uniform Color, Clean Translucent Design -->
+        <div class="quick-skills-strip">
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">SQL</span>
+          <span class="skill-pill">MySQL</span>
+          <span class="skill-pill">Microsoft Excel</span>
+          <span class="skill-pill">Power BI</span>
+          <span class="skill-pill">Power Query</span>
+          <span class="skill-pill">DAX</span>
+          <span class="skill-pill">Pandas</span>
+          <span class="skill-pill">Data Cleaning</span>
+          <span class="skill-pill">Data Visualization</span>
+          <span class="skill-pill">Dashboard Development</span>
+          <span class="skill-pill">Research &amp; Reporting</span>
+        </div>
+
+        <!-- Hero Action Buttons (Contact Me + View Projects) -->
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-outline-purple hero-cta-btn" aria-label="Scroll to contact section">
+            <span>Contact Me</span>
+          </a>
+          <a href="#projects" class="btn btn-outline-view-more hero-cta-btn" aria-label="Scroll to projects section">
+            <span>View Projects &darr;</span>
+          </a>
+        </div>
+
+      </section>
+
+      <!-- Featured Projects Overview (Recruiter-Ready Cards) -->
+      <section class="section-block" id="projects">
+        <div class="section-header-compact">
+          <div>
+            <h2 class="section-title">Projects</h2>
+            <p class="section-subtitle">Where Data becomes Actionable Business Insights</p>
+          </div>
+        </div>
+
+        <!-- 3 Cards with Project Info -->
+        <div class="home-projects-grid">
+          
+          <!-- Project 1: Customer Churn Dashboard (#ffdd00 Sunflower Yellow Accent) -->
+          <article class="home-project-card card-accent-yellow">
+            <h3 class="project-card-heading">Customer Churn &amp; Retention Analysis Dashboard</h3>
+            <p class="project-card-desc">
+              Comprehensive analytics dashboard evaluating customer retention behavior, contract tenure distributions, and revenue impact to minimize churn.
+            </p>
+            <ul class="project-card-bullets">
+              <li class="bullet-dot-yellow">Analyzed customer data to evaluate churn rate, retention patterns, customer tenure, contract types, and revenue loss.</li>
+              <li class="bullet-dot-yellow">Cleaned and transformed datasets using Power Query and developed interactive Power BI dashboards to monitor key performance indicators (KPIs).</li>
+              <li class="bullet-dot-yellow">Identified customer segments associated with higher churn and visualized trends to generate actionable insights for customer retention and business decision-making.</li>
+            </ul>
+            <div class="card-tags">
+              <span class="tag">Power BI</span>
+              <span class="tag">Excel</span>
+              <span class="tag">DAX</span>
+              <span class="tag">Power Query</span>
+            </div>
+            <div class="project-card-footer">
+              <!-- GitHub Repository Link Placeholder (Update with your actual Project 1 GitHub repo) -->
+              <a href="https://github.com/shivastharewaskar/customer-churn-dashboard" target="_blank" rel="noopener noreferrer" class="btn btn-outline-purple btn-sm" aria-label="View Customer Churn GitHub Repository" data-placeholder-notice="GitHub Repository URL for Project 1 will open once you supply your actual repository link.">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>GitHub Repo</span>
+              </a>
+              <!-- Live Demo / Dashboard Link (Update with your Power BI Web / Published URL if available) -->
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline-cyan btn-sm" aria-label="View Live Customer Churn Dashboard" data-placeholder-notice="Live Power BI Dashboard link not yet provided. Please supply your published dashboard URL to enable live viewing.">
+                <span>Live Dashboard &nearr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 2: Sales Performance (#ec4899 Magenta Accent) -->
+          <article class="home-project-card card-accent-magenta">
+            <h3 class="project-card-heading">Sales Performance &amp; Business Insights Analysis</h3>
+            <p class="project-card-desc">
+              End-to-end data analytics project extracting, cleaning, and tracking sales performance indicators and multi-dimensional revenue trends.
+            </p>
+            <ul class="project-card-bullets">
+              <li class="bullet-dot-magenta">Extracted, cleaned, and analyzed sales data using SQL and Python to evaluate revenue trends, product performance, and sales patterns.</li>
+              <li class="bullet-dot-magenta">Used data analysis techniques to track key performance indicators (KPIs), compare sales performance, and identify trends across products and time periods.</li>
+              <li class="bullet-dot-magenta">Presented analytical findings through interactive Power BI dashboards and reports to communicate business insights and support data-driven decision-making.</li>
+            </ul>
+            <div class="card-tags">
+              <span class="tag">Python</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Excel</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">Pandas</span>
+            </div>
+            <div class="project-card-footer">
+              <!-- GitHub Repository Link Placeholder (Update with your actual Project 2 GitHub repo) -->
+              <a href="https://github.com/shivastharewaskar/sales-performance-analysis" target="_blank" rel="noopener noreferrer" class="btn btn-outline-purple btn-sm" aria-label="View Sales Performance GitHub Repository" data-placeholder-notice="GitHub Repository URL for Project 2 will open once you supply your actual repository link.">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>GitHub Repo</span>
+              </a>
+              <!-- Live Report Link (Update with your published report URL if available) -->
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline-cyan btn-sm" aria-label="View Live Sales Performance Report" data-placeholder-notice="Live Report link not yet provided. Please supply your published report URL to enable live viewing.">
+                <span>Live Report &nearr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 3: Sentiment & Emotion Analysis (#f59e0b Golden Amber Accent) -->
+          <article class="home-project-card card-accent-gold">
+            <h3 class="project-card-heading">Sentiment and Emotion Analysis Framework for Hate Speech Detection</h3>
+            <p class="project-card-desc">
+              Built an NLP-based framework to classify sentiment and emotion in text using the HASOC benchmark dataset. Applied data analysis and pattern-recognition techniques to extract insights from large-scale text data, demonstrating skills relevant to consumer sentiment analysis, market research, and data-driven decision-making.
+            </p>
+            <ul class="project-card-bullets">
+              <li class="bullet-dot-gold">Engineered an NLP classification framework for sentiment and emotion detection using the benchmark HASOC dataset.</li>
+              <li class="bullet-dot-gold">Applied pattern recognition and statistical text analysis to extract structured insights from unstructured text data.</li>
+              <li class="bullet-dot-gold">Showcased transferable applications in consumer sentiment research, customer feedback analysis, and business intelligence.</li>
+            </ul>
+            <div class="card-tags">
+              <span class="tag">Python</span>
+              <span class="tag">NLTK</span>
+              <span class="tag">PyTorch</span>
+              <span class="tag">BERT</span>
+              <span class="tag">NLP</span>
+            </div>
+            <div class="project-card-footer">
+              <!-- GitHub Repository Link Placeholder (Update with your actual repository link once ready) -->
+              <a href="https://github.com/shivastharewaskar/sentiment-emotion-analysis" target="_blank" rel="noopener noreferrer" class="btn btn-outline-purple btn-sm" aria-label="View Sentiment & Emotion Analysis GitHub Repository" data-placeholder-notice="GitHub Repository URL for this project will open once you supply your actual repository link.">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>GitHub Repo</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- View More Projects Button -->
+        <div class="projects-view-more">
+          <!-- Update with your actual GitHub profile link -->
+          <a href="https://github.com/shivastharewaskar" target="_blank" rel="noopener noreferrer" class="btn btn-outline-view-more" data-placeholder-notice="Please supply your actual GitHub profile URL to open your full repository list.">
+            <span>View More on GitHub &rarr;</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Certifications & Professional Development Section -->
+      <section class="section-block" id="certifications">
+        <div class="section-header-compact">
+          <div>
+            <h2 class="section-title">Certifications &amp; Professional Development</h2>
+            <p class="section-subtitle">Verified Credentials &amp; Specialized Analytics Training</p>
+          </div>
+        </div>
+
+        <div class="achievements-grid">
+          <!-- Card 1: Power BI & Business Intelligence (#a7c957 Sage Accent) -->
+          <article class="achievement-card card-accent-cert">
+            <div class="achieve-card-header">
+              <div class="achieve-card-meta">
+                <div class="achieve-icon icon-cert" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="8" r="7"></circle>
+                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                  </svg>
+                </div>
+                <span class="project-card-badge badge-cert">Business Intelligence</span>
+              </div>
+            </div>
+            <h3 class="achieve-card-heading">[Power BI &amp; Data Analytics Certification]</h3>
+            <p class="achieve-card-desc" style="margin-bottom: 0.65rem;">
+              <strong style="color: var(--text-white);">Issuing Organization:</strong> [e.g. Microsoft / Coursera]<br>
+              <strong style="color: var(--text-white);">Issue Date:</strong> [e.g. 2024]
+            </p>
+            <p class="achieve-card-desc">
+              Demonstrates proficiency in Power BI desktop architecture, Power Query dataset transformations, complex DAX expressions, and executive KPI reporting.
+            </p>
+            <div class="achieve-card-footer">
+              <!-- Replace href with your actual credential URL or certificate file once provided -->
+              <a href="https://in.linkedin.com/in/shivastha-rewaskar-contactme" target="_blank" rel="noopener noreferrer" class="btn btn-outline-cert btn-sm achieve-show-btn" aria-label="View Power BI Certificate" data-placeholder-notice="Certificate link not yet configured. Please provide your credential URL or certificate file.">
+                <span>View Certificate &nearr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2: Database & SQL (#06b6d4 Pacific Cyan Accent) -->
+          <article class="achievement-card card-accent-cyan">
+            <div class="achieve-card-header">
+              <div class="achieve-card-meta">
+                <div class="achieve-icon icon-cyan" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  </svg>
+                </div>
+                <span class="project-card-badge badge-cyan">Database &amp; SQL</span>
+              </div>
+            </div>
+            <h3 class="achieve-card-heading">[SQL &amp; Relational Database Certification]</h3>
+            <p class="achieve-card-desc" style="margin-bottom: 0.65rem;">
+              <strong style="color: var(--text-white);">Issuing Organization:</strong> [e.g. HackerRank / IBM / Coursera]<br>
+              <strong style="color: var(--text-white);">Issue Date:</strong> [e.g. 2024]
+            </p>
+            <p class="achieve-card-desc">
+              Validates core competencies in multi-table relational joins, data aggregation, nested subqueries, indexing, and transactional schema queries.
+            </p>
+            <div class="achieve-card-footer">
+              <!-- Replace href with your actual credential URL or certificate file once provided -->
+              <a href="https://in.linkedin.com/in/shivastha-rewaskar-contactme" target="_blank" rel="noopener noreferrer" class="btn btn-outline-cyan btn-sm achieve-show-btn" aria-label="View SQL Certificate" data-placeholder-notice="Certificate link not yet configured. Please provide your credential URL or certificate file.">
+                <span>View Certificate &nearr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3: Data Analytics & Python (#fad2e1 Rose Accent) -->
+          <article class="achievement-card card-accent-research">
+            <div class="achieve-card-header">
+              <div class="achieve-card-meta">
+                <div class="achieve-icon icon-research" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                </div>
+                <span class="project-card-badge badge-research">Analytics &amp; Python</span>
+              </div>
+            </div>
+            <h3 class="achieve-card-heading">[Python for Data Analysis &amp; Visualization]</h3>
+            <p class="achieve-card-desc" style="margin-bottom: 0.65rem;">
+              <strong style="color: var(--text-white);">Issuing Organization:</strong> [e.g. Google / LinkedIn Learning]<br>
+              <strong style="color: var(--text-white);">Issue Date:</strong> [e.g. 2024]
+            </p>
+            <p class="achieve-card-desc">
+              Demonstrates practical data cleaning workflows with Pandas, statistical profiling, pattern recognition, and business reporting presentation.
+            </p>
+            <div class="achieve-card-footer">
+              <!-- Replace href with your actual credential URL or certificate file once provided -->
+              <a href="https://in.linkedin.com/in/shivastha-rewaskar-contactme" target="_blank" rel="noopener noreferrer" class="btn btn-outline-research btn-sm achieve-show-btn" aria-label="View Python Analytics Certificate" data-placeholder-notice="Certificate link not yet configured. Please provide your credential URL or certificate file.">
+                <span>View Certificate &nearr;</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Verify All on LinkedIn CTA -->
+        <div class="certifications-verify-bar" style="text-align: center; margin-top: 3rem;">
+          <a href="https://in.linkedin.com/in/shivastha-rewaskar-contactme" target="_blank" rel="noopener noreferrer" class="btn btn-outline-view-more" aria-label="View all certifications on LinkedIn">
+            <span>Verify All Certifications on LinkedIn &nearr;</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Contact & Connect Section (Accessible via Scrolling) -->
+      <section class="section-block" id="contact">
+        <div class="section-header-compact">
+          <div>
+            <h2 class="section-title">Get in Touch.</h2>
+            <p class="section-subtitle">Looking for a data or business analyst to collaborate with? Let’s connect and discuss opportunities.</p>
+          </div>
+        </div>
+
+        <div class="contact-unified-panel">
+          <!-- About & Education Area (Top) -->
+          <div class="contact-about-layout">
+            <!-- Left: About & Summary -->
+            <div class="contact-about-text">
+              <h3 class="academic-title">About</h3>
+              <p class="about-summary-desc">
+                I am a Computer Science Engineering graduate interested in data analytics, business analysis, data visualization, and technology-driven decision-making. I enjoy exploring datasets, identifying patterns, creating dashboards, and translating information into useful business insights.
+              </p>
+            </div>
+
+            <!-- Right: Education Boxes Stacked -->
+            <div class="academic-cards-stack">
+              <!-- Box 1: Graduation Details (Actual Provided Data) -->
+              <div class="academic-card-box">
+                <h4 class="academic-card-inst">Bachelor of Engineering in Computer Science</h4>
+                <p class="academic-card-meta">Computer Science Engineering <span class="meta-dot">&bull;</span> <span class="meta-period">Graduation: 2026</span><br><strong style="color: var(--text-primary); font-weight: 600;">CGPA: 8.84 / 10</strong></p>
+              </div>
+              <!-- Box 2: Higher Secondary Education (Structured Placeholder awaiting User Details) -->
+              <div class="academic-card-box">
+                <!-- Replace with your actual Junior College / School Name -->
+                <h4 class="academic-card-inst">[Your Higher Secondary School / Junior College Name]</h4>
+                <p class="academic-card-meta">
+                  Higher Secondary Certificate (HSC) &bull; [Board: e.g. State Board / CBSE] <span class="meta-dot">&bull;</span> <span class="meta-period">[Year: e.g. 2022]</span><br>
+                  <strong style="color: var(--text-primary); font-weight: 600;">[Score / Percentage: e.g. XX%]</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="contact-panel-divider" aria-hidden="true"></div>
+
+          <!-- Platforms (Below Academic Background) -->
+          <div class="contact-panel-channels">
+            <!-- Email Channel (Clickable mailto + Copy Button) -->
+            <div class="contact-platform-item">
+              <span class="platform-heading platform-email">
+                <svg class="platform-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                Email
+              </span>
+              <div class="platform-link-group">
+                <a href="mailto:shivastharewaskar5@gmail.com" id="contact-email-val" class="platform-link" title="Click to open default email client">shivastharewaskar5@gmail.com</a>
+                <button type="button" class="copy-btn-inline" data-copy-trigger="true" data-copy-target="#contact-email-val" title="Copy email address to clipboard">Copy</button>
+              </div>
+            </div>
+
+            <!-- LinkedIn Channel (Clickable LinkedIn Profile) -->
+            <div class="contact-platform-item">
+              <span class="platform-heading platform-linkedin">
+                <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                LinkedIn
+              </span>
+              <!-- Genuine LinkedIn Profile URL -->
+              <a href="https://in.linkedin.com/in/shivastha-rewaskar-contactme" target="_blank" rel="noopener noreferrer" class="platform-link">linkedin.com/in/shivastha-rewaskar-contactme</a>
+            </div>
+
+            <!-- GitHub Channel (Clickable GitHub Profile) -->
+            <div class="contact-platform-item">
+              <span class="platform-heading platform-github">
+                <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                GitHub
+              </span>
+              <!-- Genuine GitHub Profile URL -->
+              <a href="https://github.com/shivastharewaskar" target="_blank" rel="noopener noreferrer" class="platform-link">github.com/shivastharewaskar</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Minimal Terminal Footer with Social Profiles -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-status">
+        <span class="status-dot"></span>
+        <span class="status-text">Available for Data &amp; Business Analyst Roles</span>
+      </div>
+
+      <!-- Clickable Footer Social Links -->
+      <div class="footer-social-links">
+        <a href="https://github.com/shivastharewaskar" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="GitHub Profile">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+
+        <a href="https://in.linkedin.com/in/shivastha-rewaskar-contactme" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn Profile">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+
+        <a href="mailto:shivastharewaskar5@gmail.com" class="footer-social-link" aria-label="Email Me">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <span>Email</span>
+        </a>
+      </div>
+
+      <p class="footer-copy">&copy; 2026 Shivastha Rewaskar. All rights reserved.</p>
+      
+      <a href="#home" class="footer-back-to-top" aria-label="Back to top">
+        <span>Back to Top &uarr;</span>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Toast Notification for Email Copy & Link Placeholders -->
+  <div class="copy-toast" id="copy-toast" aria-live="polite">Notification</div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
