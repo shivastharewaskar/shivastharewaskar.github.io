@@ -938,6 +938,18 @@ body {
   line-height: 1.7;
 }
 
+
+.academic-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .academic-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
 .academic-cards-stack {
   display: flex;
   flex-direction: column;
