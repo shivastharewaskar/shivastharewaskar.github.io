@@ -173,190 +173,42 @@
     animate();
   }
 
-  // --- Interactive Programmer Background Video System ---
+  // --- Lofi Girl Coding Background Video Controller ---
   function initBgVideo() {
-    const wrapper = document.getElementById('video-bg-wrapper');
-    if (!wrapper) return;
+    const video = document.getElementById("bg-video");
+    if (!video) return;
 
-    const videos = {
-      sleep: document.getElementById('vid-sleep'),
-      wake: document.getElementById('vid-wake'),
-      code: document.getElementById('vid-code'),
-      relaxEnter: document.getElementById('vid-relax-enter'),
-      relaxIdle: document.getElementById('vid-relax-idle'),
-      relaxExit: document.getElementById('vid-relax-exit')
-    };
-
-    if (!videos.sleep) return;
-
-    const State = {
-      SLEEPING: 'SLEEPING',
-      WAKING: 'WAKING',
-      CODING: 'CODING',
-      RELAX_ENTER: 'RELAX_ENTER',
-      RELAX_IDLE: 'RELAX_IDLE',
-      RELAX_EXIT: 'RELAX_EXIT'
-    };
-
-    let currentState = State.SLEEPING;
-    let hasAwoken = false;
-    let currentVideo = videos.sleep;
-    let transitionTimer = null;
-    let idleTimer = null;
-    const IDLE_DELAY_MS = 2500; // 2.5s inactivity threshold before relaxing
-
-    function transitionTo(targetVideo, newState, onEnded, crossfadeMs) {
-      if (!targetVideo) return;
-      if (currentVideo === targetVideo && targetVideo.classList.contains('active')) return;
-
-      if (transitionTimer) {
-        clearTimeout(transitionTimer);
-        transitionTimer = null;
-      }
-
-      const previousVideo = currentVideo;
-      currentVideo = targetVideo;
-      currentState = newState;
-
-      targetVideo.currentTime = 0;
-      targetVideo.onended = onEnded || null;
-
-      const playPromise = targetVideo.play();
-      if (playPromise !== undefined) {
-        playPromise.then(function () {
-          targetVideo.classList.add('active');
-          if (previousVideo && previousVideo !== targetVideo) {
-            previousVideo.classList.remove('active');
-            transitionTimer = setTimeout(function () {
-              previousVideo.pause();
-              transitionTimer = null;
-            }, crossfadeMs || 600);
-          }
-        }).catch(function (err) {
-          console.warn('Video playback notice:', err);
-        });
-      }
-    }
-
-    function triggerWake() {
-      if (hasAwoken || currentState !== State.SLEEPING) return;
-      hasAwoken = true;
-      removeWakeListeners();
-
-      transitionTo(videos.wake, State.WAKING, function () {
-        startCoding();
-      }, 750);
-    }
-
-    function startCoding() {
-      transitionTo(videos.code, State.CODING, null, 500);
-      resetIdleTimer();
-    }
-
-    function startRelaxing() {
-      if (currentState !== State.CODING) return;
-
-      transitionTo(videos.relaxEnter, State.RELAX_ENTER, function () {
-        if (currentState === State.RELAX_ENTER) {
-          transitionTo(videos.relaxIdle, State.RELAX_IDLE, null, 400);
-        }
-      }, 500);
-    }
-
-    function resumeCoding() {
-      if (currentState === State.RELAX_ENTER || currentState === State.RELAX_IDLE) {
-        if (idleTimer) clearTimeout(idleTimer);
-
-        transitionTo(videos.relaxExit, State.RELAX_EXIT, function () {
-          startCoding();
-        }, 400);
-      } else if (currentState === State.CODING) {
-        resetIdleTimer();
-      }
-    }
-
-    function resetIdleTimer() {
-      if (idleTimer) clearTimeout(idleTimer);
-      idleTimer = setTimeout(function () {
-        startRelaxing();
-      }, IDLE_DELAY_MS);
-    }
-
-    function onUserActivity() {
-      if (!hasAwoken) {
-        triggerWake();
-        return;
-      }
-
-      if (currentState === State.CODING) {
-        resetIdleTimer();
-      } else if (currentState === State.RELAX_ENTER || currentState === State.RELAX_IDLE) {
-        resumeCoding();
-      }
-    }
-
-    const wakeEvents = ['scroll', 'wheel', 'touchstart', 'keydown'];
-    function onFirstWakeEvent(e) {
-      if (e.type === 'keydown') {
-        const keys = ['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Space', 'Tab', 'Home', 'End'];
-        if (!keys.includes(e.code) && !keys.includes(e.key)) return;
-      }
-      triggerWake();
-    }
-
-    function addWakeListeners() {
-      wakeEvents.forEach(function (evt) {
-        window.addEventListener(evt, onFirstWakeEvent, { passive: true, once: true });
+    // Attempt instant autoplay
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(function () {
+        // Fallback: autoplay after first user gesture if browser blocked unmuted/initial play
+        const resumeOnGesture = function () {
+          video.play().catch(function () {});
+          window.removeEventListener("click", resumeOnGesture);
+          window.removeEventListener("touchstart", resumeOnGesture);
+          window.removeEventListener("scroll", resumeOnGesture);
+        };
+        window.addEventListener("click", resumeOnGesture, { once: true, passive: true });
+        window.addEventListener("touchstart", resumeOnGesture, { once: true, passive: true });
+        window.addEventListener("scroll", resumeOnGesture, { once: true, passive: true });
       });
-      document.addEventListener('click', onFirstWakeEvent, { once: true });
     }
 
-    function removeWakeListeners() {
-      wakeEvents.forEach(function (evt) {
-        window.removeEventListener(evt, onFirstWakeEvent);
-      });
-      document.removeEventListener('click', onFirstWakeEvent);
-    }
-
-    let lastActivity = 0;
-    function handleActivity() {
-      const now = Date.now();
-      if (now - lastActivity > 100) {
-        lastActivity = now;
-        onUserActivity();
-      }
-    }
-
-    window.addEventListener('scroll', handleActivity, { passive: true });
-    window.addEventListener('wheel', handleActivity, { passive: true });
-    window.addEventListener('touchmove', handleActivity, { passive: true });
-    document.addEventListener('click', handleActivity, { passive: true });
-    document.addEventListener('keydown', function (e) {
-      const keys = ['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Space', 'Tab'];
-      if (keys.includes(e.code) || keys.includes(e.key)) {
-        handleActivity();
-      }
-    }, { passive: true });
-
-    document.addEventListener('visibilitychange', function () {
+    // Pause video when browser tab is hidden to preserve CPU/battery; resume when visible
+    document.addEventListener("visibilitychange", function () {
       if (document.hidden) {
-        if (currentVideo && !currentVideo.paused) currentVideo.pause();
+        if (!video.paused) video.pause();
       } else {
-        if (currentVideo && currentVideo.paused) {
-          currentVideo.play().catch(function () {});
-        }
+        if (video.paused) video.play().catch(function () {});
       }
     });
 
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    // Respect prefers-reduced-motion
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     if (mediaQuery.matches) {
-      Object.values(videos).forEach(function (v) {
-        if (v) v.playbackRate = 0.5;
-      });
+      video.playbackRate = 0.5;
     }
-
-    videos.sleep.play().catch(function () {});
-    addWakeListeners();
   }
 
   initBgVideo();
