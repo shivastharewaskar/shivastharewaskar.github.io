@@ -46,6 +46,29 @@
     <div class="split-curtain split-curtain-right"></div>
   </div>
 
+  <!-- Interactive Programmer Video Background Wrapper -->
+  <div id="video-bg-wrapper" class="video-bg-wrapper" aria-hidden="true">
+    <video id="vid-sleep" class="bg-video-layer active" autoplay loop muted playsinline preload="auto">
+      <source src="assets/CLIPS_PROCESSED/programmer_sleep.mp4" type="video/mp4">
+    </video>
+    <video id="vid-wake" class="bg-video-layer" muted playsinline preload="auto">
+      <source src="assets/CLIPS_PROCESSED/programmer_wake.mp4" type="video/mp4">
+    </video>
+    <video id="vid-code" class="bg-video-layer" loop muted playsinline preload="auto">
+      <source src="assets/CLIPS_PROCESSED/programmer_code.mp4" type="video/mp4">
+    </video>
+    <video id="vid-relax-enter" class="bg-video-layer" muted playsinline preload="auto">
+      <source src="assets/CLIPS_PROCESSED/programmer_relax_enter.mp4" type="video/mp4">
+    </video>
+    <video id="vid-relax-idle" class="bg-video-layer" loop muted playsinline preload="auto">
+      <source src="assets/CLIPS_PROCESSED/programmer_relax_idle.mp4" type="video/mp4">
+    </video>
+    <video id="vid-relax-exit" class="bg-video-layer" muted playsinline preload="auto">
+      <source src="assets/CLIPS_PROCESSED/programmer_relax_exit.mp4" type="video/mp4">
+    </video>
+    <div class="video-bg-overlay"></div>
+  </div>
+
   <!-- Subtle Technical Canvas Background -->
   <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
@@ -63,7 +86,7 @@
       <nav class="nav-desktop" aria-label="Main Navigation">
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#certifications" class="nav-link">Certifications</a>
-        <a href="#contact" class="nav-link">About &amp; Contact</a>
+        <a href="#about" class="nav-link">About Me</a>
       </nav>
 
       <!-- Mobile Hamburger Toggle -->
@@ -80,7 +103,7 @@
     <div class="mobile-drawer" id="mobile-drawer">
       <a href="#projects" class="mobile-link">Projects</a>
       <a href="#certifications" class="mobile-link">Certifications</a>
-      <a href="#contact" class="mobile-link">About &amp; Contact</a>
+      <a href="#about" class="mobile-link">About Me</a>
     </div>
   </header>
 
@@ -124,8 +147,8 @@
 
         <!-- Hero Action Buttons (Contact Me + View Projects) -->
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-outline-purple hero-cta-btn" aria-label="Scroll to contact section">
-            <span>Contact Me</span>
+          <a href="#about" class="btn btn-outline-purple hero-cta-btn" aria-label="Scroll to About Me section">
+            <span>About Me</span>
           </a>
           <a href="#projects" class="btn btn-outline-view-more hero-cta-btn" aria-label="Scroll to projects section">
             <span>View Projects &darr;</span>
@@ -289,7 +312,7 @@
               Hands-on industry simulation covering data interpretation, forensic technology analysis, and communicating data findings in a consulting context modeled on Deloitte Australia workflows.
             </p>
             <div class="achieve-card-footer">
-              <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_t8wNcT2njrpQQGHed_1765905496344_completion_certificate" target="_blank" rel="noopener noreferrer" class="btn btn-outline-research btn-sm achieve-show-btn" aria-label="View Forage Deloitte Certificate">
+              <a href="assets/forage-deloitte-certificate.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline-research btn-sm achieve-show-btn" aria-label="View Forage Deloitte Certificate">
                 <span>View Certificate &nearr;</span>
               </a>
             </div>
@@ -328,12 +351,13 @@
         </div>
       </section>
 
-      <!-- Contact & Connect Section (Accessible via Scrolling) -->
-      <section class="section-block" id="contact">
+      <!-- About Me & Contact Section -->
+      <section class="section-block" id="about">
+        <span id="contact" style="position: absolute; top: -80px; visibility: hidden;" aria-hidden="true"></span>
         <div class="section-header-compact">
           <div>
-            <h2 class="section-title">Get in Touch.</h2>
-            <p class="section-subtitle">Looking for a data or business analyst to collaborate with? Let’s connect and discuss opportunities.</p>
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">Data Analyst with B.E. in Computer Science &bull; Specialized in SQL, Power BI, Python &amp; Dimensional Modeling</p>
           </div>
         </div>
 
