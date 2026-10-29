@@ -141,13 +141,14 @@ body {
 
 .bg-video-layer.active,
 #bg-video.active {
-  opacity: 0.25; /* Soft ambient opacity so foreground text remains crisp and readable */
+  opacity: 0.16; /* Soft ambient opacity so foreground text remains crisp and readable */
+  filter: brightness(0.6) contrast(1.18) saturate(0.65) hue-rotate(-15deg);
 }
 
 .video-bg-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(12, 13, 16, 0.15) 0%, rgba(12, 13, 16, 0.65) 80%, rgba(12, 13, 16, 0.95) 100%);
+  background: radial-gradient(circle at 50% 50%, rgba(10, 12, 16, 0.45) 0%, rgba(10, 12, 16, 0.78) 75%, rgba(10, 12, 16, 0.98) 100%);
   pointer-events: none;
 }
 
