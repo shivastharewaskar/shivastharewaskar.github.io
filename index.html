@@ -46,11 +46,11 @@
     <div class="split-curtain split-curtain-right"></div>
   </div>
 
-  <!-- Girl Programmer / Lofi Girl Coding Background Video -->
+  <!-- Live Pixel Art Programmer Girl Background -->
   <div id="video-bg-wrapper" class="video-bg-wrapper" aria-hidden="true">
-    <video id="bg-video" class="bg-video-layer active" autoplay loop muted playsinline preload="auto">
-      <source src="assets/lofi-girl-coding.mp4" type="video/mp4">
-    </video>
+    <div class="pixel-art-bg-container">
+      <img id="bg-pixel-art" class="bg-pixel-art-layer" src="assets/pixel-coder-girl.png" alt="Pixel art programmer girl with cat and laptop" aria-hidden="true">
+    </div>
     <div class="video-bg-overlay"></div>
   </div>
 
@@ -70,8 +70,8 @@
       <!-- Desktop Nav -->
       <nav class="nav-desktop" aria-label="Main Navigation">
         <a href="#projects" class="nav-link">Projects</a>
-        <a href="#certifications" class="nav-link">Certifications</a>
         <a href="#contact" class="nav-link">Contact</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
       </nav>
 
       <!-- Mobile Hamburger Toggle -->
@@ -87,8 +87,8 @@
     <!-- Mobile Drawer Menu -->
     <div class="mobile-drawer" id="mobile-drawer">
       <a href="#projects" class="mobile-link">Projects</a>
-      <a href="#certifications" class="mobile-link">Certifications</a>
       <a href="#contact" class="mobile-link">Contact</a>
+      <a href="#certifications" class="mobile-link">Certifications</a>
     </div>
   </header>
 
@@ -242,6 +242,95 @@
         </div>
       </section>
 
+            <!-- Contact & Connect Section -->
+      <section class="section-block" id="contact">
+        <span id="about" style="position: absolute; top: -80px; visibility: hidden;" aria-hidden="true"></span>
+        <div class="section-header-compact">
+          <div>
+            <h2 class="section-title">Get in Touch.</h2>
+            <p class="section-subtitle">Looking for a data or business analyst to collaborate with? Let’s connect and discuss opportunities.</p>
+          </div>
+        </div>
+
+        <div class="contact-unified-panel">
+          <!-- About & Education Area (Top) -->
+          <div class="contact-about-layout">
+            <!-- Left: About Me & Summary -->
+            <div class="contact-about-text">
+              <h3 class="academic-title">About Me</h3>
+              <p class="about-summary-desc">
+                Data Analyst with a Bachelor of Engineering in Computer Science and practical experience in data cleaning, SQL analysis, Excel, Python, and BI reporting. Skilled in developing Power BI dashboards, dimensional data models (Star Schema), KPI analyses, and Business Requirements Documentation (BRD) that identify trends and support business decisions. Demonstrated ability to transform complex datasets into clear, actionable insights through end-to-end analytics projects.
+              </p>
+            </div>
+
+            <!-- Right: Education Boxes Stacked -->
+            <div class="academic-cards-stack">
+              <!-- Box 1: B.E. Computer Science -->
+              <div class="academic-card-box">
+                <h4 class="academic-card-inst">HVPM College of Engineering &amp; Technology</h4>
+                <p class="academic-card-meta">Bachelor of Engineering (B.E.), Computer Science &amp; Engineering <span class="meta-dot">&bull;</span> <span class="meta-period">2022&nbsp;&ndash;&nbsp;2026</span><br>
+                Sant Gadge Baba Amravati University, Amravati, Maharashtra<br>
+                <strong style="color: var(--text-primary); font-weight: 600;">CGPA: 8.84 / 10</strong></p>
+              </div>
+              <!-- Box 2: Higher Secondary (HSC) -->
+              <div class="academic-card-box">
+                <h4 class="academic-card-inst">Prabodhan Vidyalaya, Daryapur</h4>
+                <p class="academic-card-meta">
+                  Higher Secondary Certificate (HSC), Class XII <span class="meta-dot">&bull;</span> <span class="meta-period">2021&nbsp;&ndash;&nbsp;2022</span><br>
+                  Maharashtra, India<br>
+                  <strong style="color: var(--text-primary); font-weight: 600;">Percentage: 82%</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="contact-panel-divider" aria-hidden="true"></div>
+
+          <!-- Platforms (Below Academic Background) -->
+          <div class="contact-panel-channels">
+            <!-- Email Channel (Clickable mailto + Copy Button) -->
+            <div class="contact-platform-item">
+              <span class="platform-heading platform-email">
+                <svg class="platform-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                Email
+              </span>
+              <div class="platform-link-group">
+                <a href="mailto:rewaskarshivasthaa@gmail.com" id="contact-email-val" class="platform-link" title="Click to open default email client">rewaskarshivasthaa@gmail.com</a>
+                <button type="button" class="copy-btn-inline" data-copy-trigger="true" data-copy-target="#contact-email-val" title="Copy email address to clipboard">Copy</button>
+              </div>
+            </div>
+
+            <!-- LinkedIn Channel (Clickable LinkedIn Profile) -->
+            <div class="contact-platform-item">
+              <span class="platform-heading platform-linkedin">
+                <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                LinkedIn
+              </span>
+              <!-- Genuine LinkedIn Profile URL -->
+              <a href="https://in.linkedin.com/in/shivastha-rewaskar-contactme" target="_blank" rel="noopener noreferrer" class="platform-link">linkedin.com/in/shivastha-rewaskar-contactme</a>
+            </div>
+
+            <!-- GitHub Channel (Clickable GitHub Profile) -->
+            <div class="contact-platform-item">
+              <span class="platform-heading platform-github">
+                <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                GitHub
+              </span>
+              <!-- Genuine GitHub Profile URL -->
+              <a href="https://github.com/shivastharewaskar" target="_blank" rel="noopener noreferrer" class="platform-link">github.com/shivastharewaskar</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Certifications & Professional Development Section -->
       <section class="section-block" id="certifications">
         <div class="section-header-compact">
@@ -333,95 +422,6 @@
           <a href="https://in.linkedin.com/in/shivastha-rewaskar-contactme" target="_blank" rel="noopener noreferrer" class="btn btn-outline-view-more" aria-label="View all certifications on LinkedIn">
             <span>Verify All Certifications on LinkedIn &nearr;</span>
           </a>
-        </div>
-      </section>
-
-      <!-- Contact & Connect Section -->
-      <section class="section-block" id="contact">
-        <span id="about" style="position: absolute; top: -80px; visibility: hidden;" aria-hidden="true"></span>
-        <div class="section-header-compact">
-          <div>
-            <h2 class="section-title">Get in Touch.</h2>
-            <p class="section-subtitle">Looking for a data or business analyst to collaborate with? Let’s connect and discuss opportunities.</p>
-          </div>
-        </div>
-
-        <div class="contact-unified-panel">
-          <!-- About & Education Area (Top) -->
-          <div class="contact-about-layout">
-            <!-- Left: About Me & Summary -->
-            <div class="contact-about-text">
-              <h3 class="academic-title">About Me</h3>
-              <p class="about-summary-desc">
-                Data Analyst with a Bachelor of Engineering in Computer Science and practical experience in data cleaning, SQL analysis, Excel, Python, and BI reporting. Skilled in developing Power BI dashboards, dimensional data models (Star Schema), KPI analyses, and Business Requirements Documentation (BRD) that identify trends and support business decisions. Demonstrated ability to transform complex datasets into clear, actionable insights through end-to-end analytics projects.
-              </p>
-            </div>
-
-            <!-- Right: Education Boxes Stacked -->
-            <div class="academic-cards-stack">
-              <!-- Box 1: B.E. Computer Science -->
-              <div class="academic-card-box">
-                <h4 class="academic-card-inst">HVPM College of Engineering &amp; Technology</h4>
-                <p class="academic-card-meta">Bachelor of Engineering (B.E.), Computer Science &amp; Engineering <span class="meta-dot">&bull;</span> <span class="meta-period">2022&nbsp;&ndash;&nbsp;2026</span><br>
-                Sant Gadge Baba Amravati University, Amravati, Maharashtra<br>
-                <strong style="color: var(--text-primary); font-weight: 600;">CGPA: 8.84 / 10</strong></p>
-              </div>
-              <!-- Box 2: Higher Secondary (HSC) -->
-              <div class="academic-card-box">
-                <h4 class="academic-card-inst">Prabodhan Vidyalaya, Daryapur</h4>
-                <p class="academic-card-meta">
-                  Higher Secondary Certificate (HSC), Class XII <span class="meta-dot">&bull;</span> <span class="meta-period">2021&nbsp;&ndash;&nbsp;2022</span><br>
-                  Maharashtra, India<br>
-                  <strong style="color: var(--text-primary); font-weight: 600;">Percentage: 82%</strong>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Divider -->
-          <div class="contact-panel-divider" aria-hidden="true"></div>
-
-          <!-- Platforms (Below Academic Background) -->
-          <div class="contact-panel-channels">
-            <!-- Email Channel (Clickable mailto + Copy Button) -->
-            <div class="contact-platform-item">
-              <span class="platform-heading platform-email">
-                <svg class="platform-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                  <polyline points="22,6 12,13 2,6"/>
-                </svg>
-                Email
-              </span>
-              <div class="platform-link-group">
-                <a href="mailto:rewaskarshivasthaa@gmail.com" id="contact-email-val" class="platform-link" title="Click to open default email client">rewaskarshivasthaa@gmail.com</a>
-                <button type="button" class="copy-btn-inline" data-copy-trigger="true" data-copy-target="#contact-email-val" title="Copy email address to clipboard">Copy</button>
-              </div>
-            </div>
-
-            <!-- LinkedIn Channel (Clickable LinkedIn Profile) -->
-            <div class="contact-platform-item">
-              <span class="platform-heading platform-linkedin">
-                <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
-                LinkedIn
-              </span>
-              <!-- Genuine LinkedIn Profile URL -->
-              <a href="https://in.linkedin.com/in/shivastha-rewaskar-contactme" target="_blank" rel="noopener noreferrer" class="platform-link">linkedin.com/in/shivastha-rewaskar-contactme</a>
-            </div>
-
-            <!-- GitHub Channel (Clickable GitHub Profile) -->
-            <div class="contact-platform-item">
-              <span class="platform-heading platform-github">
-                <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-                </svg>
-                GitHub
-              </span>
-              <!-- Genuine GitHub Profile URL -->
-              <a href="https://github.com/shivastharewaskar" target="_blank" rel="noopener noreferrer" class="platform-link">github.com/shivastharewaskar</a>
-            </div>
-          </div>
         </div>
       </section>
 
